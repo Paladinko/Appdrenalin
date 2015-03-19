@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_yellow">#ffbb33</color>
+    <color name="primary_black">#000000</color>
+    <color name="accent_orange">#E89300</color>
+
+    <!-- popup menu -->
+    <color name="text_popup">#4D4D4D</color>
+    <!-- prvi redak big item -->
+    <color name="text_grey_1">#666666</color>
+    <!-- drugi redak big item -->
+    <color name="text_grey_2">#909090</color>
+    <!-- treci redak big item -->
+    <color name="text_grey_3">#BBBBBB</color>
+    <!-- divider i pozadina u headeru -->
+    <color name="text_grey_L_H">#EDEDED</color>
+
+</resources>
