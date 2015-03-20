@@ -9,6 +9,7 @@
         <item name="colorPrimary">@color/primary_yellow</item>
         <item name="colorPrimaryDark">@color/primary_black</item>
         <item name="colorAccent">@color/accent_orange</item>
+        <item name="android:windowBackground">@color/text_popup</item>
 
         <item name="windowActionBar">false</item>
 
