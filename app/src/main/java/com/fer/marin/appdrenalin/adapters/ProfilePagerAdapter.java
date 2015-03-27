@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.fer.marin.appdrenalin.fragments.ProfileDetailFragment;
 import com.fer.marin.appdrenalin.fragments.ProfileLocationsFragment;
+import com.fer.marin.appdrenalin.fragments.ProfilePicturesFragment;
 
 /**
  * Created by Marin on 20/03/2015.
@@ -30,7 +31,7 @@ public class ProfilePagerAdapter extends FragmentPagerAdapter{
                 fragment = ProfileLocationsFragment.newInstance();
                 break;
             case 2:
-                fragment = ProfileDetailFragment.newInstance();
+                fragment = ProfilePicturesFragment.newInstance();
                 break;
             default:
                 fragment = ProfileDetailFragment.newInstance();
