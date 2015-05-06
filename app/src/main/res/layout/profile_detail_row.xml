@@ -18,16 +18,12 @@
         android:textColor="@color/primary_yellow"
         android:text="Cycling"
         android:textSize="@dimen/abc_text_size_medium_material"
-        android:layout_marginTop="4dp"/>
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"/>
 
-    <TextView
-        android:id="@+id/profile_detail_sport_exp"
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/accent_orange"
-        android:text="2 years"
-        android:layout_marginTop="4dp"
-        android:layout_weight="1"
-        android:gravity="right"/>
+        android:layout_gravity="right"/>
 
 </LinearLayout>

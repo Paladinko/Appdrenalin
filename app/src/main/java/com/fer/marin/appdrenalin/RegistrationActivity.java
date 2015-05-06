@@ -30,29 +30,9 @@ public class RegistrationActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         toolbar.setTitleTextColor(getResources().getColor(R.color.primary_yellow));
         setSupportActionBar(toolbar);
-        setTitle("Registration");
+        setTitle("Registracija");
 
-        ImageView buttonRegistraion = (ImageView) findViewById(R.id.button_registration);
-        Bitmap icon = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.metalic);
-        buttonRegistraion.setImageBitmap(ImageHelper.getRoundedCornerBitmap(icon, 120));
 
-        ImageView bikeImage = (ImageView) findViewById(R.id.bike_registration);
-
-        final TranslateAnimation translateBike =
-                new TranslateAnimation(Animation.ABSOLUTE, 0,
-                        Animation.RELATIVE_TO_PARENT, 1,
-                        Animation.ABSOLUTE, 0,
-                        Animation.ABSOLUTE, 1);
-        translateBike.setDuration(2000);
-
-        bikeImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                v.startAnimation(translateBike);
-                v.setVisibility(View.INVISIBLE);
-            }
-        });
 
     }
 

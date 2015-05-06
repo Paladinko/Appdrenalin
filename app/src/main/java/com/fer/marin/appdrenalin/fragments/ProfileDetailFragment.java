@@ -7,12 +7,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fer.marin.appdrenalin.R;
+
+import java.util.List;
 
 public class ProfileDetailFragment extends Fragment {
 
@@ -36,45 +40,26 @@ public class ProfileDetailFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_profile_detail, container, false);
         ListView lvProfileSports = (ListView) rootView.findViewById(R.id.profile_sports_list);
         String[] sports = new String[]{"Cycling", "Mountaineering", "Scuba diving", "Skydiving", "Skiing"};
-        String[] exp = new String[]{"5 years", "1 year", "4 years", "6 months", "2 years"};
         int[] icons = new int[]{R.drawable.cycling_icon, R.drawable.mountaineering,
                 R.drawable.scuba_diving_icon, R.drawable.skydiving_icon, R.drawable.skiing_icon};
-        lvProfileSports.setAdapter(new ProfileDetailAdapter(getActivity(), sports, exp, icons));
+        lvProfileSports.setAdapter(new ProfileDetailAdapter(getActivity(), sports, icons));
         return rootView;
     }
 
 }
 
-class ProfileDetailAdapter extends BaseAdapter {
+class ProfileDetailAdapter extends ArrayAdapter<String> {
 
     Context context;
     LayoutInflater mInflater = null;
-    String[] sports, experience;
-    int[] sportIcons;
 
-    public ProfileDetailAdapter(Context context, String[] _sports, String[] _exp, int[] _sportIcons){
+    public ProfileDetailAdapter(Context context, List<String> sports){
+        super(context, R.layout.profile_detail_row, R.id.profile_detail_sport_title);
         this.context = context;
-        this.sports = _sports;
-        this.experience = _exp;
-        this.sportIcons = _sportIcons;
         mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    @Override
-    public int getCount() {
-        return sports.length;
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return sports[position];
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -84,10 +69,44 @@ class ProfileDetailAdapter extends BaseAdapter {
         }
         TextView title = (TextView) vi.findViewById(R.id.profile_detail_sport_title);
         title.setText(sports[position]);
-        TextView exp = (TextView) vi.findViewById(R.id.profile_detail_sport_exp);
-        exp.setText(experience[position]);
         ImageView img = (ImageView) vi.findViewById(R.id.profile_detail_sport_icon);
         img.setImageResource(sportIcons[position]);
         return vi;
+    }
+
+    private static class SportsViewHolder{
+        private TextView textView;
+        private ImageView imageView;
+        private CheckBox checkBox;
+
+        public SportsViewHolder(ImageView imageView, TextView textView, CheckBox checkBox){
+            this.textView = textView;
+            this.imageView = imageView;
+            this.checkBox = checkBox;
+        }
+
+        public TextView getTextView() {
+            return textView;
+        }
+
+        public void setTextView(TextView textView) {
+            this.textView = textView;
+        }
+
+        public ImageView getImageView() {
+            return imageView;
+        }
+
+        public void setImageView(ImageView imageView) {
+            this.imageView = imageView;
+        }
+
+        public CheckBox getCheckBox() {
+            return checkBox;
+        }
+
+        public void setCheckBox(CheckBox checkBox) {
+            this.checkBox = checkBox;
+        }
     }
 }

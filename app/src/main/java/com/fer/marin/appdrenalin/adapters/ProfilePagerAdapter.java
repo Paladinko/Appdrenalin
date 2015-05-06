@@ -50,11 +50,11 @@ public class ProfilePagerAdapter extends FragmentPagerAdapter{
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "PROFILE";
+                return "PROFIL";
             case 1:
-                return "LOCATIONS";
+                return "LOKACIJE";
             case 2:
-                return "PICTURES";
+                return "GALERIJA";
         }
 
         return null;

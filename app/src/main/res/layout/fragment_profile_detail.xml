@@ -35,17 +35,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/primary_yellow"
-                        android:text="Marin"
+                        android:text="Marin Bulatović"
                         android:textSize="@dimen/abc_text_size_large_material"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_marginTop="24dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primary_yellow"
-                        android:text="Bulatović"
-                        android:textSize="@dimen/abc_text_size_large_material"
-                        android:layout_marginTop="8dp"/>
 
                 </LinearLayout>
 
@@ -88,18 +81,20 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/facebook_icon"
+                    android:src="@drawable/date_icon"
                     android:layout_marginRight="32dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/primary_yellow"
-                    android:text="https://www.facebook.com/marin.bulatovic"
+                    android:text="27.12.1991"
                     android:textSize="@dimen/abc_text_size_medium_material"
                     android:layout_marginTop="4dp"/>
 
             </LinearLayout>
+
+
 
             <View
                 android:layout_marginTop="16dp"
