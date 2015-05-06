@@ -1,46 +1,36 @@
-package com.fer.marin.appdrenalin;
+package com.fer.marin.appdrenalin.activities;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.Toast;
 
-import com.fer.marin.appdrenalin.utils.ImageHelper;
+import com.fer.marin.appdrenalin.R;
 
 
-public class RegistrationActivity extends ActionBarActivity {
+public class LoginActivity extends ActionBarActivity {
 
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_login);
 
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.primary_yellow));
+        toolbar.setTitleTextColor(Color.YELLOW);
         setSupportActionBar(toolbar);
-        setTitle("Registracija");
-
-
-
+        setTitle("Login");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_registration, menu);
+        getMenuInflater().inflate(R.menu.menu_login, menu);
         return true;
     }
 
@@ -50,6 +40,11 @@ public class RegistrationActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
