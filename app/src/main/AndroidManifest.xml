@@ -21,12 +21,16 @@
         <activity
             android:name=".activities.RegistrationActivity"
             android:label="@string/title_activity_registration" >
-
         </activity>
         <activity
             android:name=".activities.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name=".activities.LocationListActivity"
+            android:label="@string/title_activity_location_list" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
