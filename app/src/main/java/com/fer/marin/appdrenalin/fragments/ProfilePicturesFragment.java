@@ -87,55 +87,57 @@ public class ProfilePicturesFragment extends Fragment {
         }
     }
 
-}
+    class ImageAdapter extends BaseAdapter {
+        private Context mContext;
 
-class ImageAdapter extends BaseAdapter {
-    private Context mContext;
-
-    public ImageAdapter(Context c) {
-        mContext = c;
-    }
-
-    public int getCount() {
-        return mThumbIds.length;
-    }
-
-    public Object getItem(int position) {
-        return null;
-    }
-
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    // create a new ImageView for each item referenced by the Adapter
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
-        if (convertView == null) {
-            // if it's not recycled, initialize some attributes
-            imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(192, 192));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(16, 16, 16, 16);
-        } else {
-            imageView = (ImageView) convertView;
+        public ImageAdapter(Context c) {
+            mContext = c;
         }
 
-        imageView.setImageResource(mThumbIds[position]);
-        return imageView;
+        public int getCount() {
+            return mThumbIds.length;
+        }
+
+        public Object getItem(int position) {
+            return null;
+        }
+
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        // create a new ImageView for each item referenced by the Adapter
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ImageView imageView;
+            if (convertView == null) {
+                // if it's not recycled, initialize some attributes
+                imageView = new ImageView(mContext);
+                imageView.setLayoutParams(new GridView.LayoutParams(192, 192));
+                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                imageView.setPadding(16, 16, 16, 16);
+            } else {
+                imageView = (ImageView) convertView;
+            }
+
+            imageView.setImageResource(mThumbIds[position]);
+            return imageView;
+        }
+
+        // references to our images
+        private Integer[] mThumbIds = {
+                R.drawable.marjan, R.drawable.marjan1,
+                R.drawable.marjan2, R.drawable.marjan3,
+                R.drawable.marjan4, R.drawable.marjan5,
+                R.drawable.sljeme, R.drawable.sljeme1,
+                R.drawable.sljeme2, R.drawable.sljeme3,
+                R.drawable.sljeme4, R.drawable.sljeme5,
+                R.drawable.velebit,
+                R.drawable.velebit2, R.drawable.velebit3,
+                R.drawable.velebit4, R.drawable.velebit5
+        };
     }
 
-    // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.marjan, R.drawable.marjan1,
-            R.drawable.marjan2, R.drawable.marjan3,
-            R.drawable.marjan4, R.drawable.marjan5,
-            R.drawable.sljeme, R.drawable.sljeme1,
-            R.drawable.sljeme2, R.drawable.sljeme3,
-            R.drawable.sljeme4, R.drawable.sljeme5,
-            R.drawable.velebit,
-            R.drawable.velebit2, R.drawable.velebit3,
-            R.drawable.velebit4, R.drawable.velebit5
-    };
 }
+
+
 

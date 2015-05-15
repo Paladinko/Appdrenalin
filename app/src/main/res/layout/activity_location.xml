@@ -1,0 +1,65 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- The first child in the layout is for the main Activity UI-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.fer.marin.appdrenalin.activities.ProfileActivity">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:layout_below="@+id/toolbarLocation"
+            android:id="@+id/tabHostLocation"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_black"
+            android:textColor="@color/primary_yellow"
+            app:pstsPaddingMiddle="false"
+            app:pstsShouldExpand="true" />
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@+id/tabHostLocation"
+            android:id="@+id/location_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </android.support.v4.view.ViewPager>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shadow_gradient"
+            android:layout_below="@+id/materialTabHost"
+            />
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbarLocation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/toolbar_background"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetStart="84dp"
+            />
+
+    </RelativeLayout>
+
+    <!-- Side navigation drawer UI -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerViewLocation"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/text_popup"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.v4.widget.DrawerLayout>
