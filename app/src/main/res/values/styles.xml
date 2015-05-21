@@ -28,4 +28,10 @@
         <item name="color">@color/primary_yellow</item>
     </style>
 
+    <style name="menu_labels_style">
+        <item name="android:textColor">@color/primary_yellow</item>
+        <item name="android:background">@color/primary_black</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
 </resources>

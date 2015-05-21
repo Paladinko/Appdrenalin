@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/location_comment_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/neo"
+        android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/location_comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ovo je predobro neznam sta da kazem"
+            android:textColor="@color/primary_yellow"/>
+
+        <TextView
+            android:id="@+id/location_comment_time"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey_3"
+            android:text="14.5.2015, 14:34"/>
+
+    </LinearLayout>
+
+</LinearLayout>

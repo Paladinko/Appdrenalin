@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.fer.marin.appdrenalin.fragments.LocationDetailFragment;
 import com.fer.marin.appdrenalin.fragments.LocationMapFragment;
+import com.fer.marin.appdrenalin.fragments.LocationVisitedFragment;
 import com.fer.marin.appdrenalin.fragments.ProfileDetailFragment;
 import com.fer.marin.appdrenalin.fragments.ProfileLocationsFragment;
 import com.fer.marin.appdrenalin.fragments.ProfilePicturesFragment;
@@ -34,7 +35,7 @@ public class LocationPagerAdapter extends FragmentPagerAdapter {
                 fragment = LocationDetailFragment.newInstance();
                 break;
             case 2:
-                fragment = LocationDetailFragment.newInstance();
+                fragment = LocationVisitedFragment.newInstance();
                 break;
             default:
                 fragment = LocationDetailFragment.newInstance();

@@ -1,10 +1,49 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.fer.marin.appdrenalin.fragments.LocationDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ListView
+        android:id="@+id/location_comments"
+        android:layout_above="@+id/location_detail_separator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp">
 
-</FrameLayout>
+    </ListView>
+
+    <View
+        android:id="@+id/location_detail_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/primary_yellow"
+        android:layout_above="@+id/ll_comment"/>
+
+    <LinearLayout
+        android:id="@+id/ll_comment"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/location_comment_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Vaš komentar..."
+            android:textColorHint="@color/text_grey_3"
+            android:textColor="@color/primary_yellow"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/comment_icon"
+            android:layout_weight="0"
+            android:layout_marginLeft="16dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
